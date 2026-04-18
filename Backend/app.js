@@ -8,9 +8,12 @@ import { errorMiddleware } from "./middlewares/errorMiddleware.js";
 import messageRouter from "./router/messageRouter.js";
 import userRouter from "./router/userRouter.js";
 import appointmentRouter from "./router/appointmentRouter.js";
-
+import chatRouter from "./router/chatRouter.js"; // ✅ YAHAN
 const app = express();
-config({ path: "./config/config.env" });
+config({ path: ".env" });
+app.get("/", (req, res) => {
+  res.send("API is running...");
+});
 
 app.use(
   cors({
@@ -33,7 +36,7 @@ app.use(
 app.use("/api/v1/message", messageRouter);
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/appointment", appointmentRouter);
-
+app.use("/api/v1/chat", chatRouter); // ✅ YAHAN ADD KARO
 dbConnection();
 
 app.use(errorMiddleware);

@@ -186,33 +186,32 @@ const AppointmentForm = () => {
                 ))}
             </select> */}
             <select
-              value={JSON.stringify({
-                firstName: doctorFirstName,
-                lastName: doctorLastName,
-              })}
-              onChange={(e) => {
-                const { firstName, lastName } = JSON.parse(e.target.value);
-                setDoctorFirstName(firstName);
-                setDoctorLastName(lastName);
-              }}
-              disabled={!department}
-            >
-              <option value="">Select Doctor</option>
-              {doctors
-                .filter((doctor) => doctor.doctorDepartment === department)
-                .map((doctor, index) => (
-                  <option
-                    key={index}
-                    value={JSON.stringify({
-                      firstName: doctor.firstName,
-                      lastName: doctor.lastName,
-                    })}
-                  >
-                    {doctor.firstName} {doctor.lastName}
-                  </option>
-                ))}
-            </select>
+  value={`${doctorFirstName} ${doctorLastName}`}
+  onChange={(e) => {
+    const [fName, lName] = e.target.value.split(" ");
+    setDoctorFirstName(fName);
+    setDoctorLastName(lName);
+  }}
+  disabled={!department}
+>
+  <option value="">Select Doctor</option>
+  {doctors
+    .filter((doctor) => doctor.doctorDepartment === department)
+    .map((doctor, index) => (
+      <option
+        key={index}
+        value={`${doctor.firstName} ${doctor.lastName}`}
+      >
+        Dr. {doctor.firstName} {doctor.lastName}
+      </option>
+    ))}
+</select>
           </div>
+          {doctorFirstName && doctorLastName && (
+            <p style={{ margin: "10px 0", fontWeight: "bold" }}>
+              Selected Doctor: Dr. {doctorFirstName} {doctorLastName} - {department}
+            </p>
+          )}
           <textarea
             rows="10"
             value={address}

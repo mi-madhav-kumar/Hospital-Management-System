@@ -1,3 +1,4 @@
+import Chatbot from "./components/Chatbot";
 import React, { useContext, useEffect } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -49,6 +50,7 @@ const App = () => {
         <Footer />
         <ToastContainer position="top-center" />
       </Router>
+      <Chatbot />
     </>
   );
 };

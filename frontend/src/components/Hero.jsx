@@ -7,12 +7,7 @@ const Hero = ({ title, imageUrl }) => {
         <div className="banner">
           <h1>{title}</h1>
           <p>
-            ZeeCare Medical Institute is a state-of-the-art facility dedicated
-            to providing comprehensive healthcare services with compassion and
-            expertise. Our team of skilled professionals is committed to
-            delivering personalized care tailored to each patient's needs. At
-            ZeeCare, we prioritize your well-being, ensuring a harmonious
-            journey towards optimal health and wellness.
+           Mediant-X is a state-of-the-art, high-tech hospital dedicated to delivering comprehensive healthcare services with advanced technology, compassion, and expertise. Our team of skilled professionals provides personalized care tailored to each patient’s needs, ensuring accurate diagnosis and effective treatment. At Mediant-X, we prioritize your well-being, offering a seamless and modern healthcare experience for a smooth journey toward optimal health and wellness.
           </p>
         </div>
         <div className="banner">
