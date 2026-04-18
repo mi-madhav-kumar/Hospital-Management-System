@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+﻿import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import "./Chatbot.css";
 import { FaPaperPlane, FaRobot, FaTimes, FaAngleDown } from "react-icons/fa";
@@ -40,7 +40,7 @@ const Chatbot = () => {
     setInput("");
 
     try {
-      const response = await axios.post("http://localhost:4000/api/v1/chat/send", {
+      const response = await axios.post("https://hospital-management-system-production-af27.up.railway.app/api/v1/chat/send", {
         message: text,
         language: language
       }, {

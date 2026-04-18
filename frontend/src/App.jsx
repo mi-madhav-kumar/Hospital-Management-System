@@ -1,4 +1,4 @@
-import Chatbot from "./components/Chatbot";
+﻿import Chatbot from "./components/Chatbot";
 import React, { useContext, useEffect } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -21,7 +21,7 @@ const App = () => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:4000/api/v1/user/patient/me",
+          "https://hospital-management-system-production-af27.up.railway.app/api/v1/user/patient/me",
           {
             withCredentials: true,
           }
