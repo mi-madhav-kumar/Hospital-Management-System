@@ -1,4 +1,4 @@
-# 🏥 Hospital Management System
+# 🏥 Mediant-X 
 
 A comprehensive, full-stack Hospital Management System designed to streamline healthcare operations. It features a modern patient-facing website, a secure admin dashboard, and an intelligent multilingual AI chatbot for instant medical assistance.
 
